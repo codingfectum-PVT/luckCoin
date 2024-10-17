@@ -45,13 +45,20 @@ const MenuLink = styled(Link)`
     padding: ${ (props) => props.p? props.p: '15px 0 15px 20px'};
     text-align: left;
   }
-  &:last-child {
+  &.customButton {
     border-width: 0px;
-    background: red;
-    width: calc(100% - 40px);
-    margin: 15px auto;
-    padding: 10px 20px;
+    background: #fff;
     text-align: center;
+    display: inline-block;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+
+    img{
+      width: 45px;
+      height: 45px;
+    }
   }
 `;
 

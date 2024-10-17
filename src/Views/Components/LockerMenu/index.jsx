@@ -7,29 +7,24 @@ const LockerMenu = (props) => {
     const menuList = [ // You can pass 4 perameters for menu title, link, target and customClass
         {
         title: "Home",
-        link: "https://poodle.finance/",
+        link: "/",
         },
         {
-        title: "Locker",
-        link: "/locker",
+        title: "About",
+        link: "/#about",
         },
         {
-        title: "View Chart",
-        link: "https://www.dextools.io/app/ether/pair-explorer/0xD017EA99F60535e5e0f87f997968ad59C6a61B06",
-        target: "_blank"
-        },
-        {
-        title: "Buy Now",
-        link: "https://app.uniswap.org/#/swap?outputCurrency=0xf5d20bae62a50c2a0953e054e9544d7906114df9&chain=mainnet",
-        customClass: "",
-        target: "_blank"
+        title: "Tokenomics",
+        link: "/#tokenomics",
         },
     ];
   return (
-    <Container>
-        <DesktopMenu menuList={menuList} />
-        <MobileMenu menuList={menuList} />
-    </Container>
+    <div style={{backgroundColor: '#000000'}}>
+      <Container maxWidth="xl">
+          <DesktopMenu menuList={menuList} />
+          <MobileMenu menuList={menuList} />
+      </Container>
+    </div>
   )
 }
 

@@ -7,6 +7,9 @@ import { toggleTheme } from '../../../../Redux/switchTheme'
 import { useDispatch, useSelector } from "react-redux";
 import logo from "../../../../assets/logo.png";
 import { MaterialUISwitch, MenuLink, MobileMainMenu, SiteLogo, DrawerBox, DrawerDivider, Humburgger, HumburggerClose, MenuButton } from "../styles";
+import { tgLink, xLink } from "../../../../links";
+import tg from '../../../../assets/tg.png'
+import x from '../../../../assets/x.png'
 
 
 const MobileMenu = (props) => {
@@ -52,15 +55,8 @@ const MobileMenu = (props) => {
           </DrawerDivider>
           <DrawerDivider>
             <List>
-              <FormControlLabel
-                control={
-                  <MaterialUISwitch 
-                    sx={{ m: 1 }} 
-                    checked={currentTheme}
-                  />
-                }
-                onClick={() => dispatch(toggleTheme())}
-              />
+              <MenuLink href={xLink} target='_blank' className="customButton"><img src={x} /></MenuLink>
+              <MenuLink href={tgLink} target='_blank' className="customButton"><img src={tg} /></MenuLink>
             </List>
           </DrawerDivider>
         </DrawerBox>
